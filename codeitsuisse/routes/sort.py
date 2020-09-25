@@ -12,9 +12,13 @@ logger = logging.getLogger(__name__)
 def evaluate_sort():
     data = request.get_json();
     logging.info("data sent for evaluation {}".format(data))
-    result= [1, 2, 3]
+    result = sorted(data)
     logging.info("My result :{}".format(result))
     return jsonify(result);
+
+
+
+
 
 
 
