@@ -37,12 +37,13 @@ def get_ans(n, text):
 def evaluate_encryption():
     data = request.get_json();
     logging.info("data sent for evaluation {}".format(data))
-    inp = data.get("input");
     result = []
-    for test_case in inp:
+    for test_case in data:
         result.append(get_ans(test_case["n"], test_case["text"]))
     logging.info("My result :{}".format(result))
-    return json.dumps(result);
+    return jsonify(result);
+
+
 
 
 
