@@ -14,17 +14,19 @@ def evaluate_fruitbasket():
     data = request.get_json();
     logging.info("data sent for evaluation {}".format(data))
     
+    n = len(data)
+    
     weights = [50, 50, 50]
     ret = 0
     keys = [key for key in data]
     for i in range(3):
         ret += weights[i] * data[keys[i]]
         
-    ret = "{}".format(ret)
+    result = "{}".format(ret)
         
-    # logging.info("My result :{}".format(result))
+    logging.info("My result :{}".format(n))
     # return jsonify({"answers": answer_dic});
-    return ret
+    return result
 
 
 
