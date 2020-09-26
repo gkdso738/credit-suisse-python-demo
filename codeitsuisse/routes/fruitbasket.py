@@ -18,7 +18,7 @@ def evaluate_fruitbasket():
     print(data)
     logging.info("data sent for evaluation {}".format(data))
     
-    weights = [50, 50, 50]
+    weights = [-33, 41, 115]
     ret = 0
     keys = [key for key in data]
     for i in range(3):
@@ -29,6 +29,9 @@ def evaluate_fruitbasket():
     # logging.info("My result :{}".format(n))
     # return jsonify({"answers": answer_dic});
     return "0"
+
+
+
 
 
 
