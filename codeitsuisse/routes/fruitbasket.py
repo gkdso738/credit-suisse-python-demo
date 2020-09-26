@@ -12,9 +12,11 @@ logger = logging.getLogger(__name__)
 @app.route('/fruitbasket', methods=['POST'])
 def evaluate_fruitbasket():
     data = request.get_data();
-    logging.info("data sent for evaluation {}".format(data))
     
-    n = len(data)
+    my_json = data.decode('utf8').replace("'", '"')
+    data = json.loads(my_json)
+    print(data)
+    logging.info("data sent for evaluation {}".format(data))
     
     weights = [50, 50, 50]
     ret = 0
@@ -24,9 +26,12 @@ def evaluate_fruitbasket():
         
     result = "{}".format(ret)
         
-    logging.info("My result :{}".format(n))
+    # logging.info("My result :{}".format(n))
     # return jsonify({"answers": answer_dic});
-    return result
+    return "0"
+
+
+
 
 
 
