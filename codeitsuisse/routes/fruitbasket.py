@@ -20,9 +20,14 @@ def evaluate_fruitbasket():
     for i in range(3):
         ret += weights[i] * data[keys[i]]
         
+    ret = "{}".format(ret)
+        
     # logging.info("My result :{}".format(result))
     # return jsonify({"answers": answer_dic});
     return ret
+
+
+
 
 
 
