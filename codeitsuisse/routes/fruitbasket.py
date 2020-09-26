@@ -28,7 +28,7 @@ def evaluate_fruitbasket():
         
     # logging.info("My result :{}".format(n))
     # return jsonify({"answers": answer_dic});
-    return result
+    return "0"
 
 
 
